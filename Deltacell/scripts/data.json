@@ -1,0 +1,14 @@
+{
+    "data": {
+        "id": "1052",
+        "role": "admin",
+        "username": "None",
+        "rank": "developer"
+    },
+    "statistics": {
+        "kill": 5,
+        "dead": 14,
+        "collect": 59,
+        "shoot": 10
+    }
+}
