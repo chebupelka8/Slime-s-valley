@@ -22,11 +22,15 @@ If you dead, you return to the starting position
 # INFORMATION
 
 Language: python
+
 Library: pygame
+
 lines of code: 667 (at the moment)
+
 development time: about week (don't every day)
 
 textures: itch.io
+
 developer: @stepchikzamytin
 
 # Thanks for watching
