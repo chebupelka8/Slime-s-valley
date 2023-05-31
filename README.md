@@ -1,8 +1,8 @@
 # Slime's valley
 
 # This game is in development
-# It's just a prototype 
 
+It's just a prototype 
 Do not judge strictly please
 
 # How to play
