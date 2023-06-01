@@ -33,6 +33,6 @@ development time: about week (not every day)
 
 textures: itch.io
 
-developer: @stepchikzamytin
+developer: @stepchikzamytin (chebupelka8)
 
 # Thanks for watching
