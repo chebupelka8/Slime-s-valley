@@ -28,7 +28,7 @@ Library: pygame
 
 lines of code: 667 (at the moment)
 
-development time: about week (don't every day)
+development time: about week (not every day)
 
 
 textures: itch.io
