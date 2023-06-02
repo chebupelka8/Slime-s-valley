@@ -2,22 +2,26 @@ import pygame
 from math import cos, sin, atan2
 from scripts.particles import Particles
 from scripts.text import write_json
+from scripts.shake_surface import shake_screen
 
 class Bullet:
     def __init__(self, pos=(0, 0)):
+        self.display = shake_screen
+        
         self.position = pygame.Vector2(pos)
 
 
 class Bullets(Bullet):
     def __init__(self, pos=(0, 0)):
-        self.display = pygame.display.get_surface()
+        super().__init__(pos=pos)
 
         self.bullets = []
         self.time = 0
 
         self.particles = Particles()
+        self.shaking = False
+        self.shake_time = 0
 
-        super().__init__(pos=pos)
     
     def rotate(self, pos): # rotate towards the body
         self.mx, self.my = pygame.mouse.get_pos()
@@ -58,9 +62,21 @@ class Bullets(Bullet):
         for body in bodies:
             
             if self.get_collide(body) and len(self.bullets) > 0: 
-                self.bullets.remove(self.bullet) # do not draw
+                self.shaking = True # shaking screen
                 
-                for i in range(10): self.particles.add(pos=(self.bullet[0][0], self.bullet[0][1]))
+                try:
+                    self.bullets.remove(self.bullet) # do not draw
+                except:
+                    pass
+                
+                for i in range(10): self.particles.add(pos=(self.bullet[0][0], self.bullet[0][1]), size=(8, 32)) # draw particles
+
+        if self.shaking: # update shaking
+            self.shake_time += 0.1
+            
+            if self.shake_time >= 2:
+                self.shaking = False
+                self.shake_time = 0
 
     def update(self):
         self.time += 0.1

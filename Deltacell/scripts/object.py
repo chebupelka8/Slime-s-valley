@@ -5,13 +5,12 @@ class Object(Sprite):
     def __init__(self, pos=(), kind="", filename="", edit=1, anim=False, frames=1):
         super().__init__(pos=pos)
 
-        self.display = pygame.display.get_surface()
-
         self.edit = edit
         self.anim = anim
         self.filename = filename
         self.kind = kind
         self.frames = frames
+        self.start_pos = pos
 
         self.image = pygame.image.load(f"Deltacell/images/objects/{self.kind}/{self.filename}.png").convert_alpha()
         self.image = pygame.transform.scale(self.image, (self.image.get_size()[0] * self.edit, self.image.get_size()[1] * self.edit))
@@ -24,7 +23,7 @@ class Object(Sprite):
         self.position = pos
     
     def get_pos(self):
-        return self.position
+        return self.start_pos
     
     def get_collide(self, body):
         return self.rect.colliderect(body)

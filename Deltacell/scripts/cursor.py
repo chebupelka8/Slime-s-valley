@@ -1,8 +1,10 @@
 import pygame
+from scripts.shake_surface import shake_screen
 
 class Cursor:
     def __init__(self, filename, edit=1):
-        self.display = pygame.display.get_surface()
+
+        self.display = shake_screen
 
         self.image = pygame.image.load(f"Deltacell\images\cursor\{filename}").convert_alpha() # load image
         self.image = pygame.transform.scale(self.image, (self.image.get_size()[0] * edit, self.image.get_size()[1] * edit))
