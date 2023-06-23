@@ -23,7 +23,7 @@ If you dead, you return to the starting position
 
 Language: python
 Library: pygame
-lines of code: 667 (at the moment)
+lines of code: 1524 (at the moment)
 development time: about week (don't every day)
 
 textures: itch.io
