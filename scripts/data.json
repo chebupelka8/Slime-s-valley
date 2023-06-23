@@ -1,0 +1,16 @@
+{
+    "data": {
+        "id": "1052",
+        "role": "admin",
+        "username": "None",
+        "rank": "developer"
+    },
+    "statistics": {
+        "start": 1228,
+        "kill": 223,
+        "dead": 3830,
+        "collect": 2620,
+        "shoot": 1944,
+        "break": 3199
+    }
+}
